@@ -1,0 +1,19 @@
+<%= render 'search_form' %>
+
+<div class="container pt-5">
+  <div class="row justify-content-md-center">
+    <div class="col-md-auto">
+      <% if @flag %>
+        <div class="alert alert-info">Asset Count: <%= @result[:assets_count] %></div>
+        <div class="alert alert-info">Link Count: <%= @result[:links_count] %></div>
+        <div class="alert alert-primary">Assets: <%= @result[:assets] %></div>
+        <div class="alert alert-secondary">Links: <%= @result[:links] %></div>
+      <% else %>
+        Unable to fetch tags from given url.
+        <div class="alert alert-warning">
+          Error: <%= @result[:error] %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

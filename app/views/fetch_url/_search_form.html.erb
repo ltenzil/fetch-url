@@ -1,0 +1,17 @@
+<div class="container pt-5">
+  <div class="row justify-content-md-center">
+    <div class="col-md-auto">
+      <div class="form">
+        <%= form_tag search_path, method: :post, class: "row g-3" do %>
+          <div class="col-auto">
+            <label for="url" class="visually-hidden">Url</label>
+            <%= text_field_tag :url, params[:url], class: 'form-control', placeholder: 'Url' %>
+          </div>
+          <div class="col-auto">
+            <%= submit_tag :submit, class: 'btn btn-primary mb-3', value: 'Fetch Url' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
